@@ -1,4 +1,4 @@
-% System-Control-for-Gripper (Time Response)
+% System-Control-for-Gripper (Time Response without Controller)
 % System parameters 
 K = 1; 
 theta2_desired = 45; 
