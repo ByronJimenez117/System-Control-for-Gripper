@@ -6,11 +6,6 @@ theta2_desired = 45;
 % Initial conditions
 initial_conditions = [10, 15, 5, theta2_desired, 13, 2, 3, 5, 4];
 
-% PID controller gains (adjust as needed, it's a single test)
-Kp = 1;
-Ki = 0.1;
-Kd = 0.01;
-
 % Definition of the equilibrium equation (equation 5)
 eq = @(t, Ta, theta_a1, theta2, theta2_desired, theta2_dot, zeta1, zeta2, xi1, xi2) ...
     [Ta - K * (theta2 - theta2_desired) * theta2_dot + Kp * (theta2_desired - theta2) + Ki * (theta2_desired - theta2) * (t - t(1)) + Kd * (0 - theta2_dot); % Equation for Ta
